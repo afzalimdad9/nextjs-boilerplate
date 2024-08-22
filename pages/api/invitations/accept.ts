@@ -4,7 +4,7 @@ import { NextApiResponse } from "next";
 import nextConnect from "next-connect";
 import jwt, { TokenExpiredError } from 'jsonwebtoken';
 import prisma from "@lib/prisma";
-import { TokenPayload } from "../organizations/[id]/invitations/index";
+import { TokenPayload } from "../organizations/[id]/invitations/send";
 
 const handler = nextConnect();
 handler.use(AuthMiddleWare([Role.customer, Role.superadmin]));
